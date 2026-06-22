@@ -5,81 +5,72 @@
 <title>GameStore Pro 🎮</title>
 
 <style>
-
 body {
-    font-family: 'Segoe UI', sans-serif;
+    font-family: Arial;
     background: linear-gradient(135deg, #0f172a, #020617);
     color: white;
-    margin: 0;
     padding: 20px;
 }
 
-h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
 .container {
-    max-width: 800px;
+    max-width: 900px;
     margin: auto;
 }
 
 .card {
-    background: rgba(30,41,59,0.8);
-    backdrop-filter: blur(10px);
+    background: #1e293b;
     padding: 20px;
-    border-radius: 15px;
+    border-radius: 10px;
     margin-bottom: 20px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.5);
 }
 
 input {
     width: 100%;
-    padding: 12px;
-    margin: 6px 0;
-    border-radius: 8px;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
     border: none;
-    outline: none;
 }
 
 button {
-    width: 100%;
-    padding: 12px;
-    margin-top: 10px;
-    background: linear-gradient(90deg, #22c55e, #4ade80);
+    padding: 10px;
+    margin-top: 5px;
     border: none;
-    border-radius: 10px;
-    font-weight: bold;
+    border-radius: 5px;
     cursor: pointer;
-    transition: 0.3s;
 }
 
-button:hover {
-    transform: scale(1.05);
-    background: linear-gradient(90deg, #16a34a, #22c55e);
+.btn-guardar {
+    background: #22c55e;
+    color: black;
+    width: 100%;
+}
+
+.btn-editar {
+    background: #3b82f6;
+    color: white;
+}
+
+.btn-eliminar {
+    background: #ef4444;
+    color: white;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 10px;
 }
 
-th {
-    background: #22c55e;
-    color: black;
-}
-
-td, th {
+th, td {
     padding: 10px;
+    border: 1px solid #334155;
     text-align: center;
-    border-bottom: 1px solid #334155;
 }
 
-tr:hover {
-    background: rgba(255,255,255,0.05);
+img {
+    width: 70px;
+    border-radius: 8px;
 }
-
 </style>
 </head>
 
@@ -94,24 +85,26 @@ tr:hover {
 
 <form id="form">
 <input type="text" id="nombre" placeholder="Nombre del juego" required>
-<input type="text" id="plataforma" placeholder="Plataforma (PS5, Xbox, PC)" required>
+<input type="text" id="plataforma" placeholder="Plataforma" required>
 <input type="number" id="precio" placeholder="Precio" required>
 <input type="number" id="stock" placeholder="Stock" required>
-<button>Guardar Juego</button>
+<input type="text" id="imagen" placeholder="URL imagen (https://...)" required>
+<button class="btn-guardar">Guardar</button>
 </form>
-
 </div>
 
 <div class="card">
-<h3>📦 Catálogo de Juegos</h3>
+<h3>Catálogo</h3>
 
 <table>
 <thead>
 <tr>
-<th>🎮 Juego</th>
-<th>🖥 Plataforma</th>
-<th>💲 Precio</th>
-<th>📦 Stock</th>
+<th>Imagen</th>
+<th>Nombre</th>
+<th>Plataforma</th>
+<th>Precio</th>
+<th>Stock</th>
+<th>Acciones</th>
 </tr>
 </thead>
 
